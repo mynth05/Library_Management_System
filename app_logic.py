@@ -91,7 +91,7 @@ class LogicApp:
         self._tracks:  HashTable = HashTable()
         self._fines:   HashTable = HashTable()
 
-    """ SÁCH """
+# SÁCH 
 
     def them_sach(self, sach: Book) -> bool:
         """Thêm sách mới. False nếu mã không hợp lệ, đã tồn tại hoặc sl < 0."""
@@ -211,7 +211,7 @@ class LogicApp:
             
         return result
 
-   """ Reader """
+# Reader
 
     def them_doc_gia(self, doc_gia: Reader) -> bool:
         if not Validator.is_valid_id(doc_gia.ma_ban_doc):
@@ -275,7 +275,7 @@ class LogicApp:
                 result.append(r)
         return result
 
-   """ TRACKBOOK """
+# TRACKBOOK 
 
     def muon_sach(self, ma_phieu: str, ma_sach: str, ma_ban_doc: str,
                   ngay_muon: str, han_tra: str) -> int:
@@ -588,7 +588,7 @@ class LogicApp:
         except (OSError, KeyError, ValueError):
             return False
 
-   """ THỐNG KÊ """
+# THỐNG KÊ 
 
     # -- cơ bản --
     def tong_dau_sach(self)     -> int: return len(self._books)
